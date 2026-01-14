@@ -1,6 +1,6 @@
 const BootLayout = ({ children }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050B10] text-[#EAFBFF] font-mono flex items-center justify-center">
+    <div className="relative min-h-screen overflow-hidden bg-[#050B10] text-[#EAFBFF]  flex items-center justify-center font-hud">
       {/* GRID */}
       <div
         className="absolute inset-0 opacity-25"
