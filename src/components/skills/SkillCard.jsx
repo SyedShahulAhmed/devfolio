@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { CATEGORY_COLORS, cardReveal } from "./data";
+import { CATEGORY_COLORS, cardReveal } from "../../constants/skills/data.js";
 
 const SkillCard = ({ skill, category, loadout, setSpotlight }) => {
   const color = CATEGORY_COLORS[category];
