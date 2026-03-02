@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Kalam:wght@300;400;700&family=Orbitron:wght@400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Orbitron:wght@400..900&family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+.terminal {
+  font-family: "JetBrains Mono", monospace;
+}
+
+@import "tailwindcss";
+
+/* About page font */
+.about-rdr {
+  font-family: "Cinzel", serif;
+}
+
+.font-hud {
+  font-family: "Orbitron", sans-serif;
+}
+
+.font-wanted {
+  font-family: "Rye", cursive;
+}
+.font-skills {
+  font-family: "Share Tech Mono", monospace;
+}
+.font-oxa {
+  font-family: "Oxanium", cursive;
+}
+.font-terminal {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-system {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.font-contact {
+  font-family: "Cinzel", serif;
+}
+
+.font-achievements {
+  font-family: "Cormorant Garamond", serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
