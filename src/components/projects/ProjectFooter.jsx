@@ -50,18 +50,6 @@ const ProjectFooter = () => {
           ’em.”
         </motion.p>
 
-        {/* AUTHOR */}
-        <div className="relative mt-4 sm:mt-6 text-center">
-          <span className="
-            text-[9px] sm:text-[10px] md:text-[11px]
-            tracking-[0.35em] sm:tracking-[0.4em]
-            uppercase
-            text-gray-400
-          ">
-            — Michael De Santa
-          </span>
-        </div>
-
         {/* FILM GRAIN */}
         <div
           className="absolute inset-0 opacity-[0.035]"
