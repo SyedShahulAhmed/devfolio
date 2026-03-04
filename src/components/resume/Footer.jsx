@@ -1,8 +1,12 @@
 const Footer = () => (
-  <footer className="mt-20 border-t border-white/10 pt-6">
+  <footer className="mt-20 border-t border-white/10 pt-8 pb-6 px-4">
     <div
       className="
-        flex items-center justify-between
+        max-w-7xl mx-auto
+        flex flex-col sm:flex-row
+        items-center sm:items-center
+        justify-center sm:justify-between
+        gap-4 sm:gap-0
         text-[10px] sm:text-[11px]
         tracking-[0.35em]
         uppercase
@@ -23,7 +27,7 @@ const Footer = () => (
       </div>
 
       {/* CENTER: LAST SYNC */}
-      <div className="hidden sm:block text-slate-600">
+      <div className="text-slate-600">
         Last Sync: <span className="text-slate-400">2026</span>
       </div>
 
