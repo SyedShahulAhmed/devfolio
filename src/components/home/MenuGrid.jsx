@@ -15,7 +15,7 @@ const menuItems = [
   { name: "ABOUT", path: "/about", icon: User, desc: "Character Profile" },
   { name: "SKILLS", path: "/skills", icon: Zap, desc: "Ability Loadout" },
   { name: "PROJECTS", path: "/projects", icon: FolderGit2, desc: "Mission Archive" },
-  { name: "STATS", path: "/stats", icon: BarChart3, desc: "Progress Data" },
+  { name: "BLOGS", path: "/blogs", icon: BarChart3, desc: "Dev Chronicles" },
   { name: "RESUME", path: "/resume", icon: FileText, desc: "Mission Briefing" },
   { name: "CONTACT", path: "/contact", icon: Mail, desc: "Open Channel" },
   {
@@ -23,7 +23,7 @@ const menuItems = [
     path: "/achievements",
     icon: Trophy,
     desc: "Unlocked Milestones",
-    wide: true, // 👈 width only
+    wide: true, 
   },
 ];
 
