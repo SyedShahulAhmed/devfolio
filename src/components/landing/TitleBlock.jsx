@@ -7,7 +7,7 @@ const TitleBlock = () => (
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
   >
-    <h1 className="font-orbitron font-bold text-6xl md:text-8xl lg:text-9xl text-foreground mb-4 flex items-baseline justify-center">
+    <h1 className="font-orbitron font-bold text-7xl md:text-8xl lg:text-9xl text-foreground mb-4 flex items-baseline justify-center">
       {/* DEV */}
       <span className="relative text-[#EAFBFF]">
         DEV

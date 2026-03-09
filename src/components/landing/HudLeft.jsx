@@ -6,7 +6,25 @@ const HudLeft = () => (
     initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
   >
-    SYS.STATUS: <span className="text-green-400">ONLINE</span>
+    SYS.STATUS:{" "}
+    <motion.span
+      className="text-green-400"
+      animate={{
+        textShadow: [
+          "0 0 2px rgba(74,222,128,0.4)",
+          "0 0 8px rgba(74,222,128,0.9)",
+          "0 0 2px rgba(74,222,128,0.4)",
+        ],
+        opacity: [0.9, 1, 0.9],
+      }}
+      transition={{
+        duration: 2.2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+    >
+      ONLINE
+    </motion.span>
     <br />
     VER: 2.0.26
   </motion.div>

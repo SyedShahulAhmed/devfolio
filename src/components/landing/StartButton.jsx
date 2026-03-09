@@ -5,9 +5,20 @@ const StartButton = ({ isPressed, onClick }) => (
     onClick={onClick}
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.6 }}
-    whileHover={{ scale: 1.06 }}
-    whileTap={{ scale: 0.96 }}
+    transition={{
+      delay: 0.6,
+      type: "spring",
+      stiffness: 90,
+      damping: 14,
+    }}
+    whileHover={{
+      scale: 1.05,
+      transition: { type: "spring", stiffness: 220, damping: 18 },
+    }}
+    whileTap={{
+      scale: 0.97,
+      transition: { type: "spring", stiffness: 300, damping: 20 },
+    }}
     className="
       relative mt-12 sm:mt-16
       font-orbitron
@@ -26,8 +37,8 @@ const StartButton = ({ isPressed, onClick }) => (
       animate={
         !isPressed
           ? {
-              opacity: [0.35, 0.75, 0.35],
-              scale: [1, 1.04, 1],
+              opacity: [0.35, 0.7, 0.35],
+              scale: [1, 1.03, 1],
             }
           : {}
       }
@@ -45,7 +56,7 @@ const StartButton = ({ isPressed, onClick }) => (
         px-10 sm:px-14 py-3 sm:py-4
         border-2 border-cyan-400
         bg-cyan-400/5
-        transition-all duration-300
+        transition-all duration-300 ease-out
         ${isPressed ? "bg-cyan-400/25" : "hover:bg-cyan-400/10"}
       `}
     >

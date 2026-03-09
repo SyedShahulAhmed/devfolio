@@ -5,7 +5,7 @@ import Particles from "./Particles";
 
 const LandingLayout = ({ children, isPressed }) => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050B10] text-[#EAFBFF]">
+    <div className="relative min-h-screen overflow-hidden bg-[#050B10] text-[#EAFBFF] font-hud">
       <GridBackground />
       <Scanlines />
       <Particles />
