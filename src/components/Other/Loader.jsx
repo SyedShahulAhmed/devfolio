@@ -93,7 +93,7 @@ export default function Loader({ onFinish }) {
     <div className="relative w-full h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden font-hud">
 
       {/* Ambient Glow */}
-      <div className="absolute w-[600px] h-[600px] bg-white/5 blur-[180px] rounded-full"></div>
+      <div className="absolute w-150 h-150 bg-white/5 blur-[180px] rounded-full"></div>
 
       {/* Scan Line */}
       <div className="absolute inset-0 pointer-events-none">
@@ -158,4 +158,4 @@ export default function Loader({ onFinish }) {
       </style>
     </div>
   );
-}
+}``
