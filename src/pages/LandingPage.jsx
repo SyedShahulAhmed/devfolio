@@ -34,7 +34,7 @@ export const LandingPage = () => {
     if (!showContent) return;
     const i = setInterval(
       () => setCurrentQuote((p) => (p + 1) % CYBERPUNK_QUOTES.length),
-      3000
+      3000,
     );
     return () => clearInterval(i);
   }, [showContent]);
