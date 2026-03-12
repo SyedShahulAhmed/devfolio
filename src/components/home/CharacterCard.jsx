@@ -41,7 +41,7 @@ const CharacterCard = () => (
         w-full
         h-full
         object-cover
-        pl-2
+        pr-2
         translate-y-[6%]
         opacity-95
         pointer-events-none

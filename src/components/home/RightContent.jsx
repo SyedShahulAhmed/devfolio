@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const RightContent = () => {
   return (
     <div className="text-center lg:text-left">
-      <div className="text-[11px] tracking-[0.35em] font-extrabold text-cyan-400 mb-1">
+      <div className="text-[11px] pt-5 md:pt-0k tracking-[0.35em] font-extrabold text-cyan-400 mb-1">
         {">"} SYSTEM INITIALIZED
       </div>
 
