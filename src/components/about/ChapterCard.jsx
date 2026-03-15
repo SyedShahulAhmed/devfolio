@@ -10,15 +10,39 @@ const ChapterCard = ({ chapter, index }) => {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.12, ease: "easeOut" }}
-      className="relative w-full pt-14 px-8 pb-8 bg-linear-to-br from-[#0f141a] via-[#0a0d11] to-[#050608] border border-orange-500/30 shadow-[inset_0_0_40px_rgba(0,0,0,0.9),0_0_60px_rgba(0,0,0,0.6)]"
+      className="
+      relative w-full pt-16 px-8 pb-8 overflow-hidden
+      bg-gradient-to-br from-[#14100c] via-[#0b0805] to-[#020201]
+      border border-orange-600/40
+      "
     >
       {/* HUD CORNERS */}
       <HUDCorners />
 
-      {/* RDR2 PLATE TAB */}
+      {/* PAPER GRAIN */}
+      <div
+        className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none"
+        style={{
+          backgroundImage:
+            "url('https://www.transparenttextures.com/patterns/paper-fibers.png')",
+        }}
+      />
+
+      {/* CHAPTER PLATE */}
       <div className="absolute top-0 left-10 z-10">
-        <div className="relative bg-[#0b0f14] px-1.5 pb-1">
-          <div className="px-6 py-1 text-[11px] tracking-[0.25em] font-bold uppercase text-orange-500 bg-[#1a1f26] border border-orange-500/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_2px_6px_rgba(0,0,0,0.6)]">
+        <div className="relative bg-[#060403] px-1 pb-1">
+          <div
+            className="
+            px-6 py-1
+            text-[11px]
+            tracking-[0.35em]
+            font-bold
+            uppercase
+            text-orange-400
+            bg-[#1a130c]
+            border border-orange-500/40
+          "
+          >
             {chapter.chapter}
           </div>
         </div>
@@ -26,44 +50,60 @@ const ChapterCard = ({ chapter, index }) => {
 
       {/* TITLE ROW */}
       <div className="flex items-center gap-4 mt-2">
-        <motion.div
-  animate={{ scale: [1, 1.05, 1] }}
-  transition={{
-    duration: 2.8,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className="flex items-center justify-center w-10 h-10 rounded-full border border-orange-500/60 text-orange-400"
->
-  <chapter.icon className="w-5 h-5" />
-</motion.div>
+        <div
+          className="
+          flex items-center justify-center
+          w-10 h-10
+          rounded-full
+          border border-orange-500/60
+          text-orange-400
+          bg-[#0e0a06]
+        "
+        >
+          <chapter.icon className="w-5 h-5 " />
+        </div>
 
-
-        <h3 className="text-2xl font-bold tracking-wide text-white">
+        <h3 className="text-2xl font-semibold tracking-wide text-[#f4e6c9]">
           {chapter.title}
         </h3>
       </div>
 
-      {/* CONTENT */}
-      <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-400 whitespace-pre-line">
-        {chapter.content}
-      </p>
+      {/* WESTERN DIVIDER */}
+      <div className="flex items-center gap-3 mt-4">
+        <span className="w-2 h-2 rotate-45 bg-orange-500/80" />
+        <div className="h-px flex-1 bg-orange-500/40" />
+      </div>
 
-      {/* QUOTE (PROLOGUE / EPILOGUE ONLY) */}
-      {isSpecial && chapter.quote && (
-        <div className="mt-6 max-w-3xl border-l-2 border-orange-500/60 pl-4">
-          <p className="text-sm italic text-gray-300">“{chapter.quote}”</p>
-          {chapter.quoteAuthor && (
-            <p className="mt-1 text-xs tracking-wider text-orange-400 uppercase">
-              {chapter.quoteAuthor}
+      {/* CONTENT AREA */}
+      <div className="relative mt-4 max-w-3xl">
+
+        {/* DARK BACKGROUND ONLY FOR CONTENT */}
+        <div className="absolute inset-0 bg-black/40 rounded-sm pointer-events-none" />
+
+        {/* CONTENT */}
+        <p className="relative text-sm leading-relaxed text-[#e8dcc5] whitespace-pre-line">
+          {chapter.content}
+        </p>
+
+        {/* QUOTE */}
+        {isSpecial && chapter.quote && (
+          <div className="relative mt-6 border-l-2 border-orange-500/50 pl-4">
+            <p className="text-sm italic text-[#f0e3c8]">
+              “{chapter.quote}”
             </p>
-          )}
-        </div>
-      )}
 
-      {/* DECORATIVE DOTS */}
-      <div className="flex gap-2 mt-6">
-        <span className="w-2 h-2 bg-orange-500/80 rotate-45" />
+            {chapter.quoteAuthor && (
+              <p className="mt-1 text-xs tracking-wider text-orange-300 uppercase">
+                {chapter.quoteAuthor}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* FOOTER MARK */}
+      <div className="flex gap-2 mt-7">
+        <span className="w-2 h-2 bg-orange-500 rotate-45" />
         <span className="w-2 h-2 bg-orange-500/60 rotate-45" />
         <span className="w-2 h-2 bg-orange-500/40 rotate-45" />
       </div>
