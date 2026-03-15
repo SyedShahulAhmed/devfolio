@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MapPin, Calendar, Skull, Star } from "lucide-react";
 
 const iconPulse = {
-  scale: [1, 1.08, 1],
+  scale: [1, 1.06, 1],
   transition: {
     duration: 3,
     repeat: Infinity,
@@ -10,88 +10,95 @@ const iconPulse = {
   },
 };
 
+/* ================= DATA ================= */
+
+const footerData = [
+  { label: "Location", value: "India", icon: MapPin, delay: 0 },
+  { label: "Active Since", value: "2019", icon: Calendar, delay: 0.3 },
+  { label: "Status", value: "Active & Building", icon: Skull, delay: 0.6 },
+  { label: "Reputation", value: "Rising", icon: Star, delay: 0.9 },
+];
+
+/* ================= COMPONENT ================= */
+
 const FooterInfo = () => (
-  <div className="gaming-card p-6 flex flex-col sm:flex-row gap-6 sm:gap-10 border-t border-orange-500/20">
-
-    {/* LOCATION */}
-    <div className="flex items-center gap-3">
-      <motion.div
-        animate={iconPulse}
-        className="flex items-center justify-center w-9 h-9 rounded-full border border-orange-500/40 text-orange-500"
-      >
-        <MapPin className="w-4 h-4" />
-      </motion.div>
-
-      <div>
-        <div className="text-xs text-gray-400 uppercase tracking-widest">
-          Location
-        </div>
-        <div className="font-semibold tracking-wide text-white">
-          India
-        </div>
+  <div
+    className="
+    relative
+    gaming-card
+    px-10
+    py-7
+    flex
+    flex-col
+    sm:flex-row
+    items-center
+    justify-between
+    gap-10
+    border-t
+    border-orange-500/25
+  "
+  >
+    {/* TOP DIVIDER */}
+    <div className="absolute top-0 left-0 w-full flex items-center justify-center">
+      <div className="flex items-center gap-3 w-[70%]">
+        <div className="flex-1 h-[1px] bg-orange-500/30" />
+        <span className="text-orange-500 text-xs tracking-widest">◆</span>
+        <div className="flex-1 h-[1px] bg-orange-500/30" />
       </div>
     </div>
 
-    {/* ACTIVE SINCE */}
-    <div className="flex items-center gap-3">
-      <motion.div
-        animate={iconPulse}
-        transition={{ delay: 0.4 }}
-        className="flex items-center justify-center w-9 h-9 rounded-full border border-orange-500/40 text-orange-500"
-      >
-        <Calendar className="w-4 h-4" />
-      </motion.div>
+    {footerData.map((item, index) => {
+      const Icon = item.icon;
 
-      <div>
-        <div className="text-xs text-gray-400 uppercase tracking-widest">
-          Active Since
+      return (
+        <div key={index} className="flex items-center gap-4 relative">
+
+          {/* STRONGER DIVIDER */}
+          {index !== 0 && (
+            <div className="hidden sm:block absolute -left-7 h-8 w-[1px] bg-orange-500/25" />
+          )}
+
+          {/* ICON BADGE */}
+          <motion.div
+            animate={iconPulse}
+            transition={{ delay: item.delay }}
+            className="
+            flex
+            items-center
+            justify-center
+            w-11
+            h-11
+            rounded-full
+            border
+            border-orange-500/50
+            bg-black/40
+            text-orange-500
+          "
+          >
+            <Icon className="w-4 h-4" />
+          </motion.div>
+
+          {/* TEXT */}
+          <div className="leading-tight">
+            <div className="text-[10px] text-gray-400 uppercase tracking-[0.3em]">
+              {item.label}
+            </div>
+            <div className="font-semibold tracking-wide text-white text-sm">
+              {item.value}
+            </div>
+          </div>
         </div>
-        <div className="font-semibold tracking-wide text-white">
-          2019
-        </div>
+      );
+    })}
+
+    {/* BOTTOM DIVIDER */}
+    <div className="absolute bottom-0 left-0 w-full flex items-center justify-center">
+      <div className="flex items-center gap-3 w-[70%]">
+        <div className="flex-1 h-[1px] bg-orange-500/30" />
+        <span className="text-orange-500 text-xs tracking-widest">◆</span>
+        <div className="flex-1 h-[1px] bg-orange-500/30" />
       </div>
     </div>
-
-    {/* STATUS */}
-    <div className="flex items-center gap-3">
-      <motion.div
-        animate={iconPulse}
-        transition={{ delay: 0.8 }}
-        className="flex items-center justify-center w-9 h-9 rounded-full border border-orange-500/40 text-orange-500"
-      >
-        <Skull className="w-4 h-4" />
-      </motion.div>
-
-      <div>
-        <div className="text-xs text-gray-400 uppercase tracking-widest">
-          Status
-        </div>
-        <div className="font-semibold tracking-wide text-white">
-          Active & Building
-        </div>
-      </div>
-    </div>
-
-    {/* REPUTATION */}
-    <div className="flex items-center gap-3">
-      <motion.div
-        animate={iconPulse}
-        transition={{ delay: 1.2 }}
-        className="flex items-center justify-center w-9 h-9 rounded-full border border-orange-500/40 text-orange-500"
-      >
-        <Star className="w-4 h-4" />
-      </motion.div>
-
-      <div>
-        <div className="text-xs text-gray-400 uppercase tracking-widest">
-          Reputation
-        </div>
-        <div className="font-semibold tracking-wide text-white">
-          Rising
-        </div>
-      </div>
-    </div>
-
   </div>
 );
 
