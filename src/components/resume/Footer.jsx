@@ -34,7 +34,7 @@ const Footer = () => (
       {/* RIGHT: CLEARANCE LEVEL */}
       <div className="flex items-center gap-2">
         <span>Clearance Level:</span>
-        <span className="text-orange-400">Porter</span>
+        <span className="text-cyan-400">Porter</span>
       </div>
     </div>
   </footer>
