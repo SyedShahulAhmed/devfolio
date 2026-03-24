@@ -7,12 +7,10 @@ const About = () => {
   return (
     <AboutLayout>
       <AboutHeader />
-
       <div className="grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-4">
           <WantedPoster />
         </div>
-
         <div className="lg:col-span-8">
           <JournalSection />
         </div>

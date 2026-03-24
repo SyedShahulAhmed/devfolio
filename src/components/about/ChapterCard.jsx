@@ -76,21 +76,18 @@ const ChapterCard = ({ chapter, index }) => {
 
       {/* CONTENT AREA */}
       <div className="relative mt-4 max-w-3xl">
-
         {/* DARK BACKGROUND ONLY FOR CONTENT */}
-        <div className="absolute inset-0 bg-black/40 rounded-sm pointer-events-none" />
+        <div className="absolute inset-0 rounded-sm pointer-events-none" />
 
         {/* CONTENT */}
-        <p className="relative text-sm leading-relaxed text-[#e8dcc5] whitespace-pre-line">
-          {chapter.content}
+        <p className="relative text-sm leading-relaxed text-[#e8dcc5] whitespace-pre-line"
+          dangerouslySetInnerHTML={{ __html: chapter.content }}>
         </p>
 
         {/* QUOTE */}
         {isSpecial && chapter.quote && (
           <div className="relative mt-6 border-l-2 border-orange-500/50 pl-4">
-            <p className="text-sm italic text-[#f0e3c8]">
-              “{chapter.quote}”
-            </p>
+            <p className="text-sm italic text-[#f0e3c8]">“{chapter.quote}”</p>
 
             {chapter.quoteAuthor && (
               <p className="mt-1 text-xs tracking-wider text-orange-300 uppercase">

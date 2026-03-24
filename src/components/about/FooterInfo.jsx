@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Calendar, Skull, Star } from "lucide-react";
-
+import {footerData} from "../../constants/about/data";
 const iconPulse = {
   scale: [1, 1.06, 1],
   transition: {
@@ -11,13 +11,6 @@ const iconPulse = {
 };
 
 /* ================= DATA ================= */
-
-const footerData = [
-  { label: "Location", value: "India", icon: MapPin, delay: 0 },
-  { label: "Active Since", value: "2019", icon: Calendar, delay: 0.3 },
-  { label: "Status", value: "Active & Building", icon: Skull, delay: 0.6 },
-  { label: "Reputation", value: "Rising", icon: Star, delay: 0.9 },
-];
 
 /* ================= COMPONENT ================= */
 

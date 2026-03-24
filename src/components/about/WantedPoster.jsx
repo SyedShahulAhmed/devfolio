@@ -21,7 +21,6 @@ const idleFloat = {
   transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
 };
 
-
 const glowPulse = {
   textShadow: [
     "0 0 4px rgba(249,115,22,0.25)",
@@ -76,19 +75,40 @@ const WantedPoster = () => (
     </motion.p>
 
     {/* ================= IMAGE ================= */}
-    <motion.div
-      animate={idleFloat}
-      className="relative w-full aspect-3/4 mb-4 overflow-hidden border border-orange-500/40"
-    >
+    <motion.div className="relative w-full aspect-3/4 mb-4 overflow-hidden border border-orange-700/70 rounded-sm">
+      {/* IMAGE */}
       <img
         src={wantedImg}
         alt="Wanted Poster"
-        className="w-full h-full object-cover contrast-110 brightness-90 sepia-[0.15]"
+        className="w-full h-full object-contain contrast-110 brightness-90 saturate-90 sepia-[0.35]"
       />
-      <div className="absolute inset-0 bg-linear-to-t from-black/75 via-transparent to-black/40" />
+
+      {/* AGED PAPER COLOR TONE */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: `
+        radial-gradient(circle at center,
+        rgba(235,210,150,0.35) 0%,
+        rgba(185,135,80,0.35) 40%,
+        rgba(90,55,25,0.55) 70%,
+        rgba(0,0,0,0.9) 100%)
+      `,
+          mixBlendMode: "multiply",
+        }}
+      />
+
+      {/* CINEMATIC RDR2 EDGE FADE */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/70 pointer-events-none" />
+
+      {/* SOFT OLD POSTER VIGNETTE */}
+      <div className="absolute inset-0 shadow-[inset_0_0_110px_rgba(0,0,0,0.85)] pointer-events-none" />
+
+      {/* VERY SUBTLE LIGHT CENTER */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,220,160,0.08),transparent_70%)] pointer-events-none" />
+
       <HUDCorners />
     </motion.div>
-
     {/* ================= BOUNTY ================= */}
     <motion.p
       animate={glowPulse}
@@ -100,9 +120,7 @@ const WantedPoster = () => (
     <p className="text-center text-sm sm:text-xl tracking-[0.35em] mb-4 uppercase font-medium font-wanted">
       <span className="text-white/70">DEAD</span>
       <span className="mx-2 text-white/40">OR</span>
-      <span className="text-orange-500 relative top-px">
-        ALIVE
-      </span>
+      <span className="text-orange-500 relative top-px">ALIVE</span>
     </p>
 
     {/* ================= CRIMES ================= */}
