@@ -25,8 +25,8 @@ export const chapters = [
   {
     chapter: "PROLOGUE",
     title: "THE BEGINNING",
-    content: `I’m <span class="font-semibold text-orange-300">Syed Shahul Ahmed</span>, from Nellore, India.
-
+    content: `I’m <span class="font-semibold text-orange-300">Syed Shahul Ahmed</span>, from Nellore, Andhra Pradesh, India.
+    
 A <span class="text-orange-200 font-medium">curious mind</span>, a quiet start — and a screen that slowly became my world.
 What began as <span class="italic text-orange-300">exploration</span> turned into <span class="font-semibold text-orange-400">purpose</span>.
 
@@ -34,8 +34,7 @@ This journey wasn’t planned. It was built — <span class="font-semibold text-
 
     quote: "We’re thieves in a world that don’t want us no more.",
     quoteAuthor: "— Arthur Morgan",
-    icon: SiSourceforge  
-,
+    icon: SiSourceforge,
     variant: "prologue",
   },
 
@@ -61,7 +60,7 @@ Scored <span class="font-bold text-orange-400">91.9%</span>.
 
 <span class="italic">Logic became sharper.</span> Problem-solving became natural.
 The transition from <span class="text-orange-300">learning</span> to <span class="font-semibold text-orange-400">application</span> began here.`,
-    icon: BiSolidSchool
+    icon: BiSolidSchool,
   },
 
   {
