@@ -18,13 +18,13 @@ const mapProjects = projects.slice(0, 8);
 
 const ProjectsMap = () => {
   return (
-    <div className="hidden lg:block relative h-[600px] mb-16 rounded-xl border border-red-500/30 bg-black">
+    <div className="hidden lg:block relative h-150 mb-16 rounded-xl border border-red-500/30 bg-black">
       {/* ================= GTA TERMINAL HUD ================= */}
       <div className="absolute font-terminal inset-0 z-30 pointer-events-none font-mono text-red-400 text-[11px] tracking-widest">
         {/* ───────── TOP TERMINAL BAR ───────── */}
         <div
           className="absolute top-0 left-0 w-full h-10
-    bg-gradient-to-b from-black/90 to-black/40
+    bg-linear-to-b from-black/90 to-black/40
     border-b border-red-500/30
     backdrop-blur-sm"
         />
@@ -127,7 +127,7 @@ const ProjectsMap = () => {
           </div>
 
           {/* divider */}
-          <div className="relative mb-2 h-px bg-gradient-to-r from-red-500/0 via-red-500/40 to-red-500/0" />
+          <div className="relative mb-2 h-px bg-linear-to-r from-red-500/0 via-red-500/40 to-red-500/0" />
 
           {/* stats grid */}
           <div className="relative grid grid-cols-2 gap-x-10 gap-y-2 text-[11px] leading-tight">
@@ -274,10 +274,10 @@ const ProjectsMap = () => {
 
             {/* Pulse ring 1 */}
             <motion.div
-              className="absolute w-8 h-8 rounded-full border border-red-500/70"
-              animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
+              className="absolute w-8 h-8 rounded-full border border-red-500/60"
+              animate={{ scale: [1, 2.2], opacity: [0.5, 0] }}
               transition={{
-                duration: 2.8,
+                duration: 4.5,
                 repeat: Infinity,
                 ease: "easeOut",
               }}
@@ -286,24 +286,24 @@ const ProjectsMap = () => {
             {/* Pulse ring 2 (delayed) */}
             <motion.div
               className="absolute w-8 h-8 rounded-full border border-red-500/40"
-              animate={{ scale: [1, 3.2], opacity: [0.5, 0] }}
+              animate={{ scale: [1, 2.8], opacity: [0.4, 0] }}
               transition={{
-                duration: 2.8,
+                duration: 5,
                 repeat: Infinity,
                 ease: "easeOut",
-                delay: 0.9,
+                delay: 1.6,
               }}
             />
 
-            {/* Pulse ring 3 (outer faint wave) */}
+            {/* Pulse ring 3 (outer soft wave) */}
             <motion.div
               className="absolute w-8 h-8 rounded-full border border-red-500/20 blur-sm"
-              animate={{ scale: [1, 4], opacity: [0.4, 0] }}
+              animate={{ scale: [1, 3.5], opacity: [0.3, 0] }}
               transition={{
-                duration: 3.4,
+                duration: 6,
                 repeat: Infinity,
                 ease: "easeOut",
-                delay: 1.8,
+                delay: 3.2,
               }}
             />
           </div>
