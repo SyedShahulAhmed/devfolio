@@ -4,7 +4,6 @@ import mountainsBg from "../../assets/Achievements/bg.png";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 md:px-8 overflow-hidden">
-      
       {/* BACKGROUND */}
       <motion.div
         initial={{ scale: 1.1, opacity: 0 }}
@@ -18,7 +17,8 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b 
+        <div
+          className="absolute inset-0 bg-linear-to-b 
                         from-[#040B14]/60 
                         via-[#050E18]/80 
                         to-[#06121F]"
@@ -26,7 +26,7 @@ export default function HeroSection() {
 
         <div
           className="absolute inset-0 
-                     bg-[radial-gradient(circle_at_top,#0B1D2D_0%,transparent_60%)] 
+                     bg-[radial-linear(circle_at_top,#0B1D2D_0%,transparent_60%)] 
                      opacity-60"
         />
       </motion.div>
@@ -52,13 +52,13 @@ export default function HeroSection() {
           transition={{ duration: 0.8 }}
           className="relative inline-flex flex-wrap items-center justify-center gap-3 
                      px-5 py-2 sm:px-6 sm:py-2.5 rounded-full
-                     bg-gradient-to-r from-[#0f172a] via-[#111827] to-[#0f172a]
+                     bg-linear-to-r from-[#0f172a] via-[#111827] to-[#0f172a]
                      border border-[#3B82F6]/40
                      backdrop-blur-md overflow-hidden group"
         >
           <div
             className="absolute inset-0 rounded-full
-                       bg-gradient-to-r from-transparent via-[#3B82F6]/20 to-transparent
+                       bg-linear-to-r from-transparent via-[#3B82F6]/20 to-transparent
                        opacity-0 group-hover:opacity-100
                        animate-pulse transition-opacity duration-500"
           />
@@ -85,7 +85,7 @@ export default function HeroSection() {
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1 }}
-          className="mt-8 font-display bg-gradient-to-b from-white via-[#93C5FD] to-[#3B82F6]
+          className="mt-8 font-display bg-linear-to-b from-white via-[#93C5FD] to-[#3B82F6]
                      bg-clip-text text-transparent 
                      drop-shadow-[0_10px_25px_rgba(59,130,246,0.35)]
                      font-bold tracking-[0.11em]
@@ -104,18 +104,18 @@ export default function HeroSection() {
           className="relative flex items-center justify-center mt-10 sm:mt-14"
         >
           <div
-            className="relative h-[4px] w-2/3 sm:w-1/2 md:w-[28rem]
-                       bg-gradient-to-r from-transparent via-zinc-600 to-transparent"
+            className="relative h-1 w-2/3 sm:w-1/2 md:w-md
+                       bg-linear-to-r from-transparent via-zinc-600 to-transparent"
           />
 
           <div
-            className="absolute h-[1px] w-1/2 md:w-[24rem]
-                       bg-zinc-800 top-1/2 -translate-y-[6px]"
+            className="absolute h-px w-1/2 md:w-[24rem]
+                       bg-zinc-800 top-1/2 -translate-y-1.5"
           />
 
           <div
-            className="absolute h-[1px] w-1/2 md:w-[24rem]
-                       bg-zinc-400/40 top-1/2 translate-y-[6px]"
+            className="absolute h-px w-1/2 md:w-[24rem]
+                       bg-zinc-400/40 top-1/2 translate-y-1.5"
           />
 
           <div
