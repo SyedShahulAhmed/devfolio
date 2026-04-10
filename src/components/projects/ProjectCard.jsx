@@ -78,10 +78,7 @@ const ProjectCard = ({ project, index }) => {
 
       {/* MODAL */}
       {showInfo && (
-        <ProjectModal
-          project={project}
-          onClose={() => setShowInfo(false)}
-        />
+        <ProjectModal project={project} onClose={() => setShowInfo(false)} />
       )}
     </>
   );
