@@ -1,7 +1,6 @@
 const TsushimaBackground = () => {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-
       {/* LOCAL ANIMATIONS — SINGLE FILE */}
       <style>{`
         // @keyframes fogDrift {
@@ -40,27 +39,28 @@ const TsushimaBackground = () => {
 
       {/* ====================== MOON (DESKTOP GLOW ONLY) ====================== */}
       <div className="moon-group absolute -top-32 -left-32 w-80 h-80 pointer-events-auto">
-        
         {/* Moon Core */}
         <div
           className="absolute inset-0 rounded-full"
           style={{
             animation: "moonFloat 18s ease-in-out infinite",
             background: `
-              radial-gradient(circle at 68% 68%,
-                rgba(248,252,255,0.95) 0%,
-                rgba(220,230,240,0.85) 24%,
-                rgba(185,200,215,0.7) 40%,
-                rgba(140,160,180,0.45) 55%,
-                rgba(95,120,145,0.25) 63%,
-                transparent 70%
-              )
-            `,
+      radial-gradient(circle at 70% 70%, rgba(255,255,255,0.95) 0%, rgba(220,230,240,0.9) 22%, rgba(190,205,220,0.75) 38%, rgba(150,170,190,0.5) 55%, rgba(100,120,140,0.25) 65%, transparent 72%),
+      
+      radial-gradient(circle at 30% 35%, rgba(120,135,150,0.22) 0%, transparent 25%),
+      radial-gradient(circle at 52% 58%, rgba(90,110,130,0.18) 0%, transparent 20%),
+      radial-gradient(circle at 40% 70%, rgba(80,95,110,0.16) 0%, transparent 18%),
+      radial-gradient(circle at 65% 40%, rgba(70,90,110,0.14) 0%, transparent 16%),
+      radial-gradient(circle at 75% 65%, rgba(60,80,95,0.12) 0%, transparent 15%),
+      
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 0%, transparent 40%)
+    `,
             boxShadow: `
-              inset -28px -28px 58px rgba(0,0,0,0.5),
-              0 0 42px rgba(215,235,255,0.35),
-              0 0 120px rgba(175,200,225,0.15)
-            `,
+      inset -32px -30px 70px rgba(0,0,0,0.55),
+      inset 18px 18px 40px rgba(255,255,255,0.06),
+      0 0 55px rgba(215,235,255,0.35),
+      0 0 140px rgba(175,200,225,0.18)
+    `,
           }}
         />
 
@@ -175,7 +175,6 @@ const TsushimaBackground = () => {
 
       {/* Cinematic Vignette */}
       <div className="absolute inset-0 shadow-[inset_120px_-120px_360px_rgba(0,0,0,0.94)]" />
-
     </div>
   );
 };
