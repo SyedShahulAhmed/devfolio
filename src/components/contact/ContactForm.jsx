@@ -4,16 +4,19 @@ import { Feather, User, Mail, Target, MessageSquare } from "lucide-react";
 
 const fields = [
   {
+    field: "name",
     label: "Traveler’s Name",
     placeholder: "Your full name",
     icon: User,
   },
   {
+    field: "email",
     label: "Way to Reach You",
     placeholder: "you@email.com",
     icon: Mail,
   },
   {
+    field: "subject",
     label: "Purpose",
     placeholder: "Hiring, collaboration, or inquiry",
     icon: Target,
@@ -22,12 +25,34 @@ const fields = [
 
 const ContactForm = () => {
   const [sent, setSent] = useState(false);
+  const AccessKey = import.meta.env.VITE_WEB3FORMS_KEY;
 
-  const handleSubmit = (e) => {
+  const [result, setResult] = useState("");
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
-    e.target.reset();
-    setTimeout(() => setSent(false), 9000);
+
+    setResult("Sending...");
+
+    const formData = new FormData(e.target);
+    formData.append("access_key", AccessKey);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSent(true);
+        setResult("");
+        e.target.reset();
+        setTimeout(() => setSent(false), 9000);
+      } else {
+        setResult("");
+      }
+    } catch (error) {
+      setResult("");
+    }
   };
 
   return (
@@ -51,6 +76,7 @@ const ContactForm = () => {
               overflow-hidden
             "
           >
+            <input type="hidden" name="from_name" value="Portfolio Contact" />
             {/* Ink wash */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_60%)] opacity-60" />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,transparent,rgba(255,255,255,0.04),transparent)] mix-blend-overlay" />
@@ -72,7 +98,7 @@ const ContactForm = () => {
               </motion.p>
 
               {/* Fields */}
-              {fields.map(({ label, placeholder, icon: Icon }, i) => (
+              {fields.map(({ field, label, placeholder, icon: Icon }, i) => (
                 <motion.div
                   key={label}
                   initial={{ opacity: 0, x: -20 }}
@@ -95,6 +121,7 @@ const ContactForm = () => {
 
                   <input
                     required
+                    name={field}
                     placeholder={placeholder}
                     className="
                       w-full
@@ -129,6 +156,7 @@ const ContactForm = () => {
 
                 <textarea
                   rows="5"
+                  name="message"
                   required
                   placeholder="Write with honesty. The wind carries truth farther than force."
                   className="
