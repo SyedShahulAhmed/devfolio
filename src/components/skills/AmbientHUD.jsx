@@ -4,7 +4,7 @@ const PARTICLES = Array.from({ length: 28 });
 
 const AmbientHUD = () => {
   return (
-    <div className="fixed inset-0 z-[1] pointer-events-none">
+    <div className="fixed inset-0 z-1 pointer-events-none">
 
       {/* ================= GRID ================= */}
       {/* MAIN GRID */}
