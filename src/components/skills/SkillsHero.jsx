@@ -21,7 +21,7 @@ const SkillsHero = () => (
   >
     {/* ================= QUOTE ================= */}
     <p className="text-center font-mono text-[12px] sm:text-xs tracking-widest text-red-600 mb-4 sm:mb-6">
-      "THE SUIT DOESN'T MAKE THE HERO — BUT IT HELPS."
+      "WITH GREAT POWER COMES GREAT RESPONSIBILITY."
     </p>
 
     {/* ================= LOADOUT LABEL ================= */}
