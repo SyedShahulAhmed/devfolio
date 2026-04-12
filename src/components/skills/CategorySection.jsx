@@ -1,42 +1,7 @@
 import { motion } from "framer-motion";
 import SkillCard from "./SkillCard";
-import { Code2, Layers, Palette, Wrench } from "lucide-react";
-
+import { CATEGORY_THEME } from "../../constants/skills/data";
 /* ================= CATEGORY THEME ================= */
-const CATEGORY_THEME = {
-  "CORE POWERS": {
-    icon: Code2,
-    iconBg: "bg-red-500/10",
-    iconBorder: "border-red-500/60",
-    iconText: "text-red-500",
-    titleText: "text-red-500",
-    line: "from-red-500/40",
-  },
-  "TECH SUIT MODULES": {
-    icon: Layers,
-    iconBg: "bg-cyan-400/10",
-    iconBorder: "border-cyan-400/60",
-    iconText: "text-cyan-400",
-    titleText: "text-cyan-300",
-    line: "from-cyan-400/40",
-  },
-  "VISUAL SYSTEMS": {
-    icon: Palette,
-    iconBg: "bg-purple-500/10",
-    iconBorder: "border-purple-500/60",
-    iconText: "text-purple-400",
-    titleText: "text-purple-300",
-    line: "from-purple-500/40",
-  },
-  "GADGETS & TOOLS": {
-    icon: Wrench,
-    iconBg: "bg-amber-500/10",
-    iconBorder: "border-amber-500/60",
-    iconText: "text-amber-400",
-    titleText: "text-amber-300",
-    line: "from-amber-500/40",
-  },
-};
 
 const FALLBACK_THEME = CATEGORY_THEME["CORE POWERS"];
 
@@ -88,7 +53,7 @@ const CategorySection = ({ category, loadout, setSpotlight }) => {
 
             {/* Underline */}
             <div
-              className={`mt-1 h-px w-40 bg-gradient-to-r ${theme.line} to-transparent`}
+              className={`mt-1 h-px w-40 bg-linear-to-r ${theme.line} to-transparent`}
             />
 
             <p className="mt-1 text-xs font-mono tracking-wide text-gray-400">
@@ -98,7 +63,7 @@ const CategorySection = ({ category, loadout, setSpotlight }) => {
 
           {/* HUD EXTENSION */}
           <div
-            className={`flex-1 h-px bg-gradient-to-r ${theme.line} to-transparent ml-4`}
+            className={`flex-1 h-px bg-linear-to-r ${theme.line} to-transparent ml-4`}
           />
         </div>
       </div>
