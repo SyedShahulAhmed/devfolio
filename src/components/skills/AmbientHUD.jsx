@@ -32,7 +32,7 @@ const AmbientHUD = () => {
       />
 
       {/* ================= HUD SCAN LINE ================= */}
-      <div className="absolute top-16 bottom-16 left-6 right-6 sm:top-12 sm:bottom-12 sm:left-8 sm:right-8">
+      <div className="absolute hidden md:block top-16 bottom-16 left-6 right-6 sm:top-12 sm:bottom-12 sm:left-8 sm:right-8">
         <motion.div
           className="absolute top-0 bottom-0 w-px bg-cyan-400/30"
           initial={{ x: 0 }}
