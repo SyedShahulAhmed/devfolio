@@ -6,55 +6,55 @@ const quoteThemes = {
     "Booting developer console...",
     "Initializing creativity engine...",
     "Deploying innovation...",
-    "Building something legendary..."
+    "Building something legendary...",
   ],
 
   projects: [
     "Compiling side quests...",
     "Constructing digital worlds...",
     "Forging new projects...",
-    "Turning ideas into reality..."
+    "Turning ideas into reality...",
   ],
 
   skills: [
     "Grinding experience points...",
     "Sharpening problem-solving...",
     "Leveling up developer skills...",
-    "Mastering new technologies..."
+    "Mastering new technologies...",
   ],
 
   blogs: [
     "Loading knowledge modules...",
     "Preparing developer insights...",
     "Documenting the journey...",
-    "Sharing developer wisdom..."
+    "Sharing developer wisdom...",
   ],
 
   contact: [
     "Opening communication channels...",
     "Connecting networks...",
     "Preparing transmission...",
-    "Awaiting incoming signal..."
+    "Awaiting incoming signal...",
   ],
 
   resume: [
     "Scanning achievements...",
     "Loading career timeline...",
-    "Preparing professional records..."
+    "Preparing professional records...",
   ],
 
   achievements: [
     "Displaying trophies...",
     "Calculating milestones...",
-    "Unlocking achievements..."
+    "Unlocking achievements...",
   ],
 
   default: [
     "Initializing developer mindset...",
     "Debugging reality...",
     "Refactoring the universe...",
-    "Optimizing performance..."
-  ]
+    "Optimizing performance...",
+  ],
 };
 
 export default function Loader({ onFinish }) {
@@ -74,9 +74,7 @@ export default function Loader({ onFinish }) {
     setQuote(currentQuotes[Math.floor(Math.random() * currentQuotes.length)]);
 
     const quoteInterval = setInterval(() => {
-      setQuote(
-        currentQuotes[Math.floor(Math.random() * currentQuotes.length)]
-      );
+      setQuote(currentQuotes[Math.floor(Math.random() * currentQuotes.length)]);
     }, 3500);
 
     const timer = setTimeout(() => {
@@ -91,27 +89,18 @@ export default function Loader({ onFinish }) {
 
   return (
     <div className="relative w-full h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden font-hud">
-
       {/* Ambient Glow */}
       <div className="absolute w-150 h-150 bg-white/5 blur-[180px] rounded-full"></div>
 
-      {/* Scan Line */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="scan-line"></div>
-      </div>
-
       {/* Loader Core */}
       <div className="relative flex items-center justify-center mb-16">
-
         <div className="absolute w-36 h-36 border border-white/20 rounded-full pulse-ring"></div>
         <div className="absolute w-28 h-28 border-2 border-white border-t-transparent rounded-full spin-ring"></div>
 
         <div className="w-4 h-4 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.7)]"></div>
       </div>
 
-      <h1 className="text-lg tracking-[0.5em] text-white mb-4">
-        INITIALIZING
-      </h1>
+      <h1 className="text-lg tracking-[0.5em] text-white mb-4">INITIALIZING</h1>
 
       <p className="text-sm text-gray-300 text-center max-w-md px-6 transition-all duration-500">
         {quote}
@@ -158,4 +147,5 @@ export default function Loader({ onFinish }) {
       </style>
     </div>
   );
-}``
+}
+``;
