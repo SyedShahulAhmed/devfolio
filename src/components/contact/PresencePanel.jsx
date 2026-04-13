@@ -164,7 +164,7 @@ const PresencePanel = () => (
             >
               <Mail className="w-3.5 h-3.5 text-[#7c2a2a]" />
             </span>
-            contact@yourdomain.com 
+            syedshahul737@gmail.com
           </div>
         </div>
       </motion.div>
