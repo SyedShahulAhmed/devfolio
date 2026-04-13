@@ -84,7 +84,7 @@ This is the <span class="font-semibold text-orange-300">proving ground</span> �
 
 <span class="font-semibold text-orange-300">Gaming</span> sharpens strategy.
 <span class="font-semibold text-orange-300">Music</span> brings balance.
-<span class="font-semibold text-orange-300">Video editing</span> fuels creativity.
+<span class="font-semibold text-orange-300">Reading</span> fuels imagination.
 
 These aren’t distractions — they are <span class="italic text-orange-400">part of the system</span>.`,
     icon: Code,
