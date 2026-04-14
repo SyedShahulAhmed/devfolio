@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Suspense, lazy, memo } from "react";
-
+import { Analytics } from "@vercel/analytics/react"
 import ScrollToTop from "./components/Other/ScrollToTop";
 import GameNavbar from "./components/Other/GameNavbar";
 import Loader from "./components/Other/Loader";
@@ -58,6 +58,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <AppContent />
+      <Analytics />
     </BrowserRouter>
   );
 }
