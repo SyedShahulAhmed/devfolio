@@ -55,7 +55,8 @@ Every section is crafted with inspiration from iconic games — blending **UI/UX
 - **Frontend** → React + Vite
 - **Styling** → Tailwind CSS
 - **Animations** → Framer Motion
-- **Deployment** → Vercel / Netlify
+- **Icons** → Lucide React
+- **Deployment** → Vercel
 
 ---
 
